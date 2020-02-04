@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="totalTime" value="0" hidden>
+  <label for="totalTimeDisplay">Total Time: </label>
+  <input type="text" id="totalTimeDisplay" value="00:00:00:000">
+  <input type="text" id="currentLapTime" value="0" hidden>
+  <label for="currentLapTimeDisplay">Current Lap Time: </label>
+  <input type="text" id="currentLapTimeDisplay" value="00:00:00:000">
+  <button id="start">Start</button>
+  <button id="lap">Lap</button>
+  <button id="reset">Reset</button>
+  <ul id="lapTimes"></ul>
+
+  <script src="stopwatch.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
