@@ -5,6 +5,6 @@ const currentLapTimeDisplay = document.querySelector('#currentLapTimeDisplay');
 const startButton = document.querySelector('#start');
 const lapButton = document.querySelector('#lap');
 const resetButton = document.querySelector('#reset');
-const lapTimes = document.querySelector('#lapTimes')
+const lapTimesList = document.querySelector('#lap-times-list')
 
-const stopWatch = new StopWatch(totalTime, totalTimeDisplay, currentLapTime, currentLapTimeDisplay, startButton, lapButton, resetButton, lapTimes)
+const stopWatch = new StopWatch(totalTime, totalTimeDisplay, currentLapTime, currentLapTimeDisplay, startButton, lapButton, resetButton, lapTimesList)

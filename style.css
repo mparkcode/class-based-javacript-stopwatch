@@ -1,7 +1,7 @@
 #watch-area{
   border: 1px solid black;
   border-radius: 30px;
-  width: 80%;
+  width: 50%;
   display: inline-block;
   position: absolute;
   top: 20%;
@@ -30,6 +30,22 @@
 #currentLapTimeDisplay{
   font-size: 1.4em;
   color: #4f372f;
+  margin-right: 7%;
+}
+
+#control-buttons{
+  margin-bottom: 20px;
+}
+
+#lap-times{
+  text-align: left;
+  display: inline-block;
+  margin-left: 25%;
+}
+
+#lap-times-list{
+  font-family: 'Almarai', sans-serif;
+  font-size: 1.2em;
 }
 
 .timer-display{
@@ -44,4 +60,8 @@
   margin-left: 3%;
   margin-right: 3%;
   outline: none;
+}
+
+.lap{
+  margin-bottom: 4%;
 }

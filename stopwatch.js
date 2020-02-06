@@ -1,6 +1,6 @@
 class StopWatch {
 
-  constructor(totalTime, totalTimeDisplay, currentLapTime, currentLapTimeDisplay, startButton, lapButton, resetButton, lapTimes){
+  constructor(totalTime, totalTimeDisplay, currentLapTime, currentLapTimeDisplay, startButton, lapButton, resetButton, lapTimesList){
     this.totalTime = totalTime;
     this.totalTimeDisplay = totalTimeDisplay;
     this.currentLapTime = currentLapTime;
@@ -8,7 +8,7 @@ class StopWatch {
     this.startButton = startButton;
     this.lapButton = lapButton;
     this.resetButton = resetButton;
-    this.lapTimes = lapTimes;
+    this.lapTimesList = lapTimesList;
     this.operating = false;
 
     this.startButton.addEventListener('click', this.start);
@@ -39,8 +39,9 @@ class StopWatch {
   lap = () => {
     if(this.operating){
       const lapLi = document.createElement('li')
+      lapLi.classList.add('lap')
       lapLi.innerHTML = this.currentLapTimeDisplay.value;
-      this.lapTimes.appendChild(lapLi)
+      this.lapTimesList.appendChild(lapLi)
       this.currentLapTimer = 0
     }
   }
@@ -52,8 +53,8 @@ class StopWatch {
     this.currentLapTimer = 0
     this.totalTimeDisplay.value = this.convertSecondsToTime(this.totalTime.value)
     this.currentLapTimeDisplay.value = this.convertSecondsToTime(this.currentLapTime.value)
-    while(this.lapTimes.firstChild){
-      this.lapTimes.removeChild(this.lapTimes.firstChild);
+    while(this.lapTimesList.firstChild){
+      this.lapTimesList.removeChild(this.lapTimesList.firstChild);
     } 
   }
 
