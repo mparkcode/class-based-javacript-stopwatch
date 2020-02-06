@@ -4,19 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Almarai&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
 <body>
+  <div id="watch-area">
+
+
+    <div id="total-time-display">
+      <input type="text" class="timer-display" id="totalTimeDisplay" value="00:00:00:000">
+    </div>
+    
+    <div id="current-lap-time-display">
+      <input type="text" class="timer-display" id="currentLapTimeDisplay" value="00:00:00:000">
+    </div>
+    
+    
+    
+    
+    <button class="control-button" id="start"><i class="fas fa-play"></i></button>
+    <button class="control-button" id="lap"><i class="fas fa-stopwatch"></i></button>
+    <button class="control-button" id="reset"><i class="fas fa-sync-alt"></i></button>
+    <ul id="lapTimes"></ul>
+  </div>
+
   <input type="text" id="totalTime" value="0" hidden>
-  <label for="totalTimeDisplay">Total Time: </label>
-  <input type="text" id="totalTimeDisplay" value="00:00:00:000">
   <input type="text" id="currentLapTime" value="0" hidden>
-  <label for="currentLapTimeDisplay">Current Lap Time: </label>
-  <input type="text" id="currentLapTimeDisplay" value="00:00:00:000">
-  <button id="start">Start</button>
-  <button id="lap">Lap</button>
-  <button id="reset">Reset</button>
-  <ul id="lapTimes"></ul>
 
   <script src="stopwatch.js"></script>
   <script src="script.js"></script>

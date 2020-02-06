@@ -21,10 +21,10 @@ class StopWatch {
       this.count()
       this.interval = setInterval(this.count, 10)
       this.operating = true;
-      this.startButton.innerHTML = "Pause";
+      this.startButton.innerHTML = `<i class="fas fa-pause"></i>`;
     } else {
       clearInterval(this.interval)
-      this.startButton.innerHTML = "Start";
+      this.startButton.innerHTML = `<i class="fas fa-play"></i>`;
       this.operating = false;
     }
   }
@@ -83,7 +83,7 @@ class StopWatch {
     const timeString = hours.toString().padStart(2, '0') 
       + ':' + minutes.toString().padStart(2, '0') 
       + ':' + seconds.toString().padStart(2, '0')
-      + ':' + milliseconds.toString().padStart(2, '0');
+      + ':' + milliseconds.toString().padStart(3, '0');
 
     return timeString;
   }

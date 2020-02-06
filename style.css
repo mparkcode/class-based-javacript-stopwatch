@@ -1,0 +1,47 @@
+#watch-area{
+  border: 1px solid black;
+  border-radius: 30px;
+  width: 80%;
+  display: inline-block;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+}
+
+#total-time-display{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  
+}
+
+#totalTimeDisplay{
+  font-size: 3em;
+  text-align: center;
+  color: #2F4F4F;
+  width: 80%;
+}
+
+#current-lap-time-display{
+  margin-bottom: 30px;
+}
+
+#currentLapTimeDisplay{
+  font-size: 1.4em;
+  color: #4f372f;
+}
+
+.timer-display{
+  border: none;
+  font-family: 'Almarai', sans-serif;
+}
+
+.control-button{
+  font-size: 2em;
+  background-color: transparent;
+  border: none;
+  margin-left: 3%;
+  margin-right: 3%;
+  outline: none;
+}
