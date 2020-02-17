@@ -6,5 +6,6 @@ const startButton = document.querySelector('#start');
 const lapButton = document.querySelector('#lap');
 const resetButton = document.querySelector('#reset');
 const lapTimesList = document.querySelector('#lap-times-list')
+const svgBackground = document.querySelector("#svg-background")
 
-const stopWatch = new StopWatch(totalTime, totalTimeDisplay, currentLapTime, currentLapTimeDisplay, startButton, lapButton, resetButton, lapTimesList)
+const stopWatch = new StopWatch(totalTime, totalTimeDisplay, currentLapTime, currentLapTimeDisplay, startButton, lapButton, resetButton, lapTimesList, svgBackground)

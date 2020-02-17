@@ -1,6 +1,6 @@
 class StopWatch {
 
-  constructor(totalTime, totalTimeDisplay, currentLapTime, currentLapTimeDisplay, startButton, lapButton, resetButton, lapTimesList){
+  constructor(totalTime, totalTimeDisplay, currentLapTime, currentLapTimeDisplay, startButton, lapButton, resetButton, lapTimesList, svgBackground){
     this.totalTime = totalTime;
     this.totalTimeDisplay = totalTimeDisplay;
     this.currentLapTime = currentLapTime;
@@ -9,6 +9,7 @@ class StopWatch {
     this.lapButton = lapButton;
     this.resetButton = resetButton;
     this.lapTimesList = lapTimesList;
+    this.svgBackground = svgBackground
     this.operating = false;
 
     this.startButton.addEventListener('click', this.start);

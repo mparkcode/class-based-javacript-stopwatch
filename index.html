@@ -10,30 +10,31 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="watch-area">
+  <div id="stopwatch">
+    <div id="watch-area">
 
-
-    <div id="total-time-display">
-      <input type="text" class="timer-display" id="totalTimeDisplay" value="00:00:00:000">
+      <div id="total-time-display">
+        <input type="text" class="timer-display" id="totalTimeDisplay" value="00:00:00:000">
+      </div>
+      
+      <div id="current-lap-time-display">
+        <input type="text" class="timer-display" id="currentLapTimeDisplay" value="00:00:00:000">
+      </div>
+      
+      <div id="control-buttons">
+        <button class="control-button" id="start"><i class="fas fa-play"></i></button>
+        <button class="control-button" id="lap"><i class="fas fa-stopwatch"></i></button>
+        <button class="control-button reset-button" id="reset"><i class="fas fa-sync-alt"></i></button>
+      </div>
+      
+      <div id="lap-times">
+        <ol id="lap-times-list"></ol>
+      </div>
+      
     </div>
-    
-    <div id="current-lap-time-display">
-      <input type="text" class="timer-display" id="currentLapTimeDisplay" value="00:00:00:000">
-    </div>
-    
-    
-    
-    <div id="control-buttons">
-      <button class="control-button" id="start"><i class="fas fa-play"></i></button>
-      <button class="control-button" id="lap"><i class="fas fa-stopwatch"></i></button>
-      <button class="control-button reset-button" id="reset"><i class="fas fa-sync-alt"></i></button>
-    </div>
-    
-
-    <div id="lap-times">
-      <ol id="lap-times-list"></ol>
-    </div>
-    
+    <svg id="svg-background">
+      
+    </svg>
   </div>
 
   <input type="text" id="totalTime" value="0" hidden>

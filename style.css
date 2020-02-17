@@ -1,3 +1,15 @@
+#stopwatch{
+  position: relative;
+  display: inline-block;
+  width: 100vw;
+  height: 100vh;
+}
+
+#svg-background{
+  width: 100vw;
+  height: 100vh;
+}
+
 #watch-area{
   border: 1px solid black;
   border-radius: 30px;
