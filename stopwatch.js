@@ -23,6 +23,7 @@ class StopWatch {
       this.interval = setInterval(this.count, 10)
       this.operating = true;
       this.startButton.innerHTML = `<i class="fas fa-pause"></i>`;
+      this.svgBackground.appendChild(this.createCircle())
     } else {
       clearInterval(this.interval)
       this.startButton.innerHTML = `<i class="fas fa-play"></i>`;
@@ -44,6 +45,7 @@ class StopWatch {
       lapLi.innerHTML = this.currentLapTimeDisplay.value;
       this.lapTimesList.appendChild(lapLi)
       this.currentLapTimer = 0
+      this.svgBackground.appendChild(this.createCircle())
     }
   }
 
@@ -88,5 +90,21 @@ class StopWatch {
       + ':' + milliseconds.toString().padStart(3, '0');
 
     return timeString;
+  }
+
+  createCircle = () => {
+    const circle = document.createElementNS('http://www.w3.org/2000/svg', "circle")
+    console.dir(circle)
+    const randX = Math.floor(Math.random() * document.documentElement.clientWidth)
+    const randY = Math.floor(Math.random() * document.documentElement.clientHeight)
+    circle.setAttributeNS(null, 'fill', "transparent")
+    circle.setAttributeNS(null, 'stroke', 'green')
+    circle.setAttributeNS(null, 'stroke-width', '15')
+    circle.setAttributeNS(null, 'r', '10')
+    circle.setAttributeNS(null, 'cx', randX)
+    circle.setAttributeNS(null, 'cy', randY)
+    console.dir(circle)
+
+    return circle
   }
 }
