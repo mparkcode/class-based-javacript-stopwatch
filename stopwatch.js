@@ -1,6 +1,6 @@
 class StopWatch {
 
-  constructor(totalTime, totalTimeDisplay, currentLapTime, currentLapTimeDisplay, startButton, lapButton, resetButton, lapTimesList, svgBackground){
+  constructor(totalTime, totalTimeDisplay, currentLapTime, currentLapTimeDisplay, startButton, lapButton, resetButton, lapTimesList, svgBackground, currCircle){
     this.totalTime = totalTime;
     this.totalTimeDisplay = totalTimeDisplay;
     this.currentLapTime = currentLapTime;
@@ -11,6 +11,8 @@ class StopWatch {
     this.lapTimesList = lapTimesList;
     this.svgBackground = svgBackground
     this.operating = false;
+    this.circleId = 0;
+    this.currCircle;
 
     this.startButton.addEventListener('click', this.start);
     this.lapButton.addEventListener('click', this.lap);
@@ -45,7 +47,10 @@ class StopWatch {
       lapLi.innerHTML = this.currentLapTimeDisplay.value;
       this.lapTimesList.appendChild(lapLi)
       this.currentLapTimer = 0
-      this.svgBackground.appendChild(this.createCircle())
+      const circle = this.createCircle()
+      this.svgBackground.appendChild(circle)
+      this.currCircle = circle
+      console.log(this.currCircle)
     }
   }
 
@@ -94,7 +99,6 @@ class StopWatch {
 
   createCircle = () => {
     const circle = document.createElementNS('http://www.w3.org/2000/svg', "circle")
-    console.dir(circle)
     const randX = Math.floor(Math.random() * document.documentElement.clientWidth)
     const randY = Math.floor(Math.random() * document.documentElement.clientHeight)
     circle.setAttributeNS(null, 'fill', "transparent")
@@ -103,7 +107,8 @@ class StopWatch {
     circle.setAttributeNS(null, 'r', '10')
     circle.setAttributeNS(null, 'cx', randX)
     circle.setAttributeNS(null, 'cy', randY)
-    console.dir(circle)
+    circle.setAttributeNS(null, 'id', `circle-${this.circleId}`)
+    this.circleId += 1
 
     return circle
   }
